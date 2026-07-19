@@ -26,15 +26,15 @@ export default function Hero() {
           className="max-w-3xl"
         >
           <p className="mb-6 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70 backdrop-blur">
-            Business Website Developer • E-commerce Website Developer • Full Stack Web Developer
+          AVAILABLE FOR NEW PROJECTS • WEB DEVELOPER BASED IN INDIA
           </p>
 
           <h1 className="max-w-4xl text-[clamp(2.5rem,5vw,5rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-white">
-            Premium Websites That Help Businesses Grow
+            Websites That Build Trust, Impress Customers, and Grow Businesses.
           </h1>
 
           <p className="mt-8 max-w-2xl text-[clamp(1rem,1.5vw,1.2rem)] leading-8 text-white/60">
-            I build WordPress websites, custom business websites, ecommerce websites, and full stack web solutions that are fast, reliable, SEO-friendly, and designed to turn visitors into enquiries and customers.
+            I am Nabadeep Talukdar, a website developer specializing in modern websites for businesses that care about quality, performance, and user experience. Every project is crafted to strengthen your brand, improve credibility, and turn visitors into customers.
           </p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
