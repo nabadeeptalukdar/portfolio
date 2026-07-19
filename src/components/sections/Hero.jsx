@@ -15,7 +15,7 @@ const links = [
 
 export default function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden px-5 py-24 pt-28 sm:px-8 sm:py-24 sm:pt-32 lg:px-10 lg:py-28 lg:pt-36 xl:py-32 xl:pt-30">
+    <section id="home" className="relative overflow-hidden px-5 py-24 pt-28 sm:px-8 sm:py-24 sm:pt-32 lg:px-10 lg:py-28 lg:pt-36 xl:py-0 xl:pt-10">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_50%)]" />
 
       <div className="mx-auto flex min-h-100vh max-w-7xl flex-col items-center justify-between gap-14 px-0 sm:gap-16 lg:flex-row lg:gap-20">
@@ -34,7 +34,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-[clamp(1rem,1.5vw,1.2rem)] leading-8 text-white/60">
-            I am Nabadeep Talukdar, a website developer specializing in modern websites for businesses that care about quality, performance, and user experience. Every project is crafted to strengthen your brand, improve credibility, and turn visitors into customers.
+            Hii, I am Nabadeep Talukdar, a website developer specializing in modern websites for businesses that care about quality, performance, and user experience. Every project is crafted to strengthen your brand, improve credibility, and turn visitors into customers.
           </p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -51,10 +51,6 @@ export default function Hero() {
               </Button>
             </a>
           </div>
-
-          <p className="mt-6 max-w-xl text-[clamp(0.95rem,1.1vw,1rem)] leading-7 text-white/50">
-          ⚡ Fast Performance   ✓ SEO Ready   📱 Mobile Optimized   🛠 Easy to Manage    🤝 Ongoing Support</p>
-
           <div className="mt-10 flex flex-wrap gap-2 sm:gap-3">
             {links.map((item) => {
               const Icon = item.icon;
