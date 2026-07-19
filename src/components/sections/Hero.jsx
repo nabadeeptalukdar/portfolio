@@ -40,7 +40,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
             <Link href="/book-call" aria-label="Book a Free Strategy Call">
               <Button className="h-[52px] rounded-full px-6 text-[1rem] text-black shadow-[0_16px_40px_-18px_rgba(255,255,255,0.55)] transition hover:scale-[1.01] sm:px-7">
-                Book a Free Strategy Call
+                Start Your Project
                 <HiArrowRight className="ml-2 text-lg" />
               </Button>
             </Link>
@@ -53,8 +53,7 @@ export default function Hero() {
           </div>
 
           <p className="mt-6 max-w-xl text-[clamp(0.95rem,1.1vw,1rem)] leading-7 text-white/50">
-            Trusted by founders, businesses, and brands that need a professional website, clear communication, and dependable development from planning to launch and beyond.
-          </p>
+          ⚡ Fast Performance   ✓ SEO Ready   📱 Mobile Optimized   🛠 Easy to Manage    🤝 Ongoing Support</p>
 
           <div className="mt-10 flex flex-wrap gap-2 sm:gap-3">
             {links.map((item) => {
