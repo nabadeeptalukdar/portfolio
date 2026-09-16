@@ -8,31 +8,27 @@ import GlassCard from "@/components/ui/GlassCard";
 const projects = [
   {
     title: "JHBH",
-    subtitle: "Luxury Jewelry eCommerce Website",
+    technology: "Shopify, custom theme development",
     description: "A premium ecommerce experience for a luxury jewellery brand with a refined customer journey, strong visual presentation, and a website designed to support sales.",
-    tags: ["Ecommerce Website Development", "Premium UX", "Responsive"],
-    accent: "from-[#f7e7c1] via-[#d4b777] to-[#8b6021]",
+    link: "https://jbhjewellery.com",
   },
   {
     title: "Shaanze",
-    subtitle: "Premium Gifting Store",
+    technology: "Shopify, custom sections, responsive UX",
     description: "An elegant Shopify store focused on gifting products with custom sections, premium UX, and an experience built to improve browsing and conversion.",
-    tags: ["Shopify Store Development", "Shopify Customization", "Premium UX"],
-    accent: "from-[#d5c4ff] via-[#8f78ff] to-[#4d31b4]",
+    link: "https://shaanze.com",
   },
   {
     title: "Stryde Arena",
-    subtitle: "Premium Sports Arena Website",
+    technology: "Next.js, responsive design, conversion UX",
     description: "A modern business website helping users discover sports facilities and services with a clear structure, polished presentation, and a stronger path to enquiry.",
-    tags: ["Business Website Development", "User Experience", "Conversion"],
-    accent: "from-[#b9d7ff] via-[#6da9ff] to-[#1f4d80]",
+    link: "https://strydearena.com",
   },
   {
     title: "The Flavour Alchemist",
-    subtitle: "Exclusive Restaurant Website",
+    technology: "Custom website development, responsive UX",
     description: "An elegant website designed for an invite-only restaurant experience with a strong sense of brand, detail, and a polished digital presence.",
-    tags: ["Custom Website Development", "Luxury Brand", "Responsive"],
-    accent: "from-[#ffd1a8] via-[#ff8f4f] to-[#8d3c16]",
+    link: "https://theflavouralchemist.com",
   },
 ];
 
@@ -48,7 +44,7 @@ export default function ProjectsSection() {
           />
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
           {projects.map((project, index) => (
             <motion.article
               key={project.title}
@@ -57,27 +53,14 @@ export default function ProjectsSection() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: index * 0.08, duration: 0.45 }}
             >
-              <GlassCard className="group h-full overflow-hidden p-0">
-                <div className={`relative h-44 overflow-hidden rounded-[20px] bg-linear-to-br ${project.accent}`}>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.28),transparent_35%)]" />
-                  <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/30 to-transparent" />
-                </div>
-                <div className="p-6 sm:p-7 lg:p-8">
-                  <p className="text-sm font-medium uppercase tracking-[0.3em] text-white/40">{project.subtitle}</p>
-                  <h3 className="mt-2 text-2xl font-semibold text-white">{project.title}</h3>
-                  <p className="mt-4 text-base leading-7 text-white/60">{project.description}</p>
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="rounded-full border border-white/10 bg-black/20 px-3 py-1.5 text-sm text-white/70">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <a href="#contact" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white/80 transition hover:text-white">
-                    Discuss a similar project
+              <GlassCard className="group flex h-full flex-col p-5 sm:p-7">
+                <p className="text-xs font-medium uppercase tracking-[0.24em] text-white/40">{project.technology}</p>
+                <h3 className="mt-3 text-2xl font-semibold text-white">{project.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-white/60 sm:text-base sm:leading-7">{project.description}</p>
+                <a href={project.link} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-fit items-center gap-2 text-sm font-medium text-white/80 transition hover:text-white">
+                    View project
                     <HiArrowRight className="text-base" />
-                  </a>
-                </div>
+                </a>
               </GlassCard>
             </motion.article>
           ))}
