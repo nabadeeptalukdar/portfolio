@@ -8,37 +8,37 @@ import GlassCard from "@/components/ui/GlassCard";
 const projects = [
   {
     title: "OGConverter",
-    technology: "ASTRO.JS, TAILWIND CSS, JAVASCRIPT, BROWSER APIs",
+    technology: "BROWSER-BASED IMAGE TOOLKIT",
     description: "A privacy-first image toolkit for converting, compressing, resizing, and optimizing images directly in the browser with fast, local processing.",
     link: "https://ogconverter.com/",
   },
   {
     title: "Stryde Arena",
-    technology: "WORDPRESS, CUSTOM DEVELOPMENT, GSAP, RESPONSIVE UX",
+    technology: "PREMIUM MULTI-SPORTS ARENA WEBSITE",
     description: "A dynamic website for a premium multi-sport destination, combining bold visual storytelling, interactive animations, and clear journeys for sports, coaching, and memberships.",
     link: "https://strydearena.com/",
   },
   {
     title: "JHBH",
-    technology: "WORDPRESS, CUSTOM DEVELOPMENT, GSAP, RESPONSIVE UX",
+    technology: "LUXURY JEWELLERY BRAND WEBSITE",
     description: "A luxury jewellery website built around immersive storytelling, elegant product presentation, and refined interactions that reflect the brand’s premium identity.",
     link: "https://jhbh.in/",
   },
   {
     title: "Shaanze",
-    technology: "SHOPIFY, LIQUID, CUSTOM SECTIONS, ECOMMERCE UX",
+    technology: "PREMIUM GIFTING ECOMMERCE STORE",
     description: "A premium Shopify gifting store built with custom sections, refined product presentation, and a smooth shopping experience designed around discovery and conversion.",
     link: "https://shaanze.in/",
   },
   {
     title: "The Flavour Alchemist",
-    technology: "WORDPRESS, CUSTOM DEVELOPMENT, GSAP, RESPONSIVE UX",
+    technology: "EXCLUSIVE RESTAURANT WEBSITE",
     description: "An immersive website created for an invite-only dining experience, blending sophisticated visual direction, motion, and brand storytelling into a distinctive digital presence.",
     link: "https://theflavouralchemist.in/",
   },
   {
     title: "Anandalok",
-    technology: "WORDPRESS, CUSTOM DESIGN, RESPONSIVE UX, SEO",
+    technology: "SENIOR LIVING & CARE WEBSITE",
     description: "A clear and accessible website for a senior living community, helping families explore accommodation, care services, pricing, and essential information with confidence.",
     link: "https://anandalokbongora.org/",
   },
