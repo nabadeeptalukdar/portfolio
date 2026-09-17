@@ -7,28 +7,40 @@ import GlassCard from "@/components/ui/GlassCard";
 
 const projects = [
   {
-    title: "JHBH",
-    technology: "Shopify, custom theme development",
-    description: "A premium ecommerce experience for a luxury jewellery brand with a refined customer journey, strong visual presentation, and a website designed to support sales.",
-    link: "https://jbhjewellery.com",
-  },
-  {
-    title: "Shaanze",
-    technology: "Shopify, custom sections, responsive UX",
-    description: "An elegant Shopify store focused on gifting products with custom sections, premium UX, and an experience built to improve browsing and conversion.",
-    link: "https://shaanze.com",
+    title: "OGConverter",
+    technology: "ASTRO.JS, TAILWIND CSS, JAVASCRIPT, BROWSER APIs",
+    description: "A privacy-first image toolkit for converting, compressing, resizing, and optimizing images directly in the browser with fast, local processing.",
+    link: "https://ogconverter.com/",
   },
   {
     title: "Stryde Arena",
-    technology: "Next.js, responsive design, conversion UX",
-    description: "A modern business website helping users discover sports facilities and services with a clear structure, polished presentation, and a stronger path to enquiry.",
-    link: "https://strydearena.com",
+    technology: "WORDPRESS, CUSTOM DEVELOPMENT, GSAP, RESPONSIVE UX",
+    description: "A dynamic website for a premium multi-sport destination, combining bold visual storytelling, interactive animations, and clear journeys for sports, coaching, and memberships.",
+    link: "https://strydearena.com/",
+  },
+  {
+    title: "JHBH",
+    technology: "WORDPRESS, CUSTOM DEVELOPMENT, GSAP, RESPONSIVE UX",
+    description: "A luxury jewellery website built around immersive storytelling, elegant product presentation, and refined interactions that reflect the brand’s premium identity.",
+    link: "https://jhbh.in/",
+  },
+  {
+    title: "Shaanze",
+    technology: "SHOPIFY, LIQUID, CUSTOM SECTIONS, ECOMMERCE UX",
+    description: "A premium Shopify gifting store built with custom sections, refined product presentation, and a smooth shopping experience designed around discovery and conversion.",
+    link: "https://shaanze.in/",
   },
   {
     title: "The Flavour Alchemist",
-    technology: "Custom website development, responsive UX",
-    description: "An elegant website designed for an invite-only restaurant experience with a strong sense of brand, detail, and a polished digital presence.",
-    link: "https://theflavouralchemist.com",
+    technology: "WORDPRESS, CUSTOM DEVELOPMENT, GSAP, RESPONSIVE UX",
+    description: "An immersive website created for an invite-only dining experience, blending sophisticated visual direction, motion, and brand storytelling into a distinctive digital presence.",
+    link: "https://theflavouralchemist.in/",
+  },
+  {
+    title: "Anandalok",
+    technology: "WORDPRESS, CUSTOM DESIGN, RESPONSIVE UX, SEO",
+    description: "A clear and accessible website for a senior living community, helping families explore accommodation, care services, pricing, and essential information with confidence.",
+    link: "https://anandalokbongora.org/",
   },
 ];
 
@@ -57,9 +69,9 @@ export default function ProjectsSection() {
                 <p className="text-xs font-medium uppercase tracking-[0.24em] text-white/40">{project.technology}</p>
                 <h3 className="mt-3 text-2xl font-semibold text-white">{project.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-white/60 sm:text-base sm:leading-7">{project.description}</p>
-                <a href={project.link} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-fit items-center gap-2 text-sm font-medium text-white/80 transition hover:text-white">
-                    View project
-                    <HiArrowRight className="text-base" />
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex w-fit items-center gap-2 text-sm font-medium text-white/80 transition hover:text-white">
+                  View project
+                  <HiArrowRight className="text-base transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </GlassCard>
             </motion.article>
