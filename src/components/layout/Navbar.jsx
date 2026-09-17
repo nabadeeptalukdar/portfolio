@@ -3,13 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { HiArrowRight, HiBars3, HiXMark } from "react-icons/hi2";
-
-const links = [
-  { href: "#services", label: "Services" },
-  { href: "#projects", label: "Work" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
-];
+import { navigationLinks } from "@/data/siteData";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -76,18 +70,19 @@ export default function Navbar() {
 
           <nav className="hidden md:block" aria-label="Primary navigation">
             <ul className="flex items-center gap-7 lg:gap-9">
-              {links.map((link) => {
-                const isActive = activeSection === link.href.replace("#", "");
+              {navigationLinks.map((link) => {
+                const isHome = link.href === "/";
+                const isActive = isHome ? activeSection === "home" : false;
 
                 return (
                   <li key={link.label}>
-                    <a
+                    <Link
                       href={link.href}
                       className={`group relative text-sm font-medium transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black ${isActive ? "text-white" : "text-white/60 hover:text-white"}`}
                     >
                       <span>{link.label}</span>
                       <span className={`absolute bottom-[-6px] left-0 h-px w-full origin-left bg-white/80 transition-transform duration-300 ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`} />
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
@@ -96,10 +91,10 @@ export default function Navbar() {
 
           <div className="flex items-center gap-3">
             <Link
-              href="/book-call"
+              href="/contact"
               className="hidden rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_-16px_rgba(255,255,255,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:inline-flex"
             >
-              Book a Free Website Consultation
+              Discuss Your Project
             </Link>
 
             <button
@@ -136,14 +131,14 @@ export default function Navbar() {
 
         <nav className="mt-10" aria-label="Mobile navigation">
           <ul className="flex flex-col gap-2">
-            {links.map((link) => {
-              const isActive = activeSection === link.href.replace("#", "");
+            {navigationLinks.map((link) => {
+              const isActive = link.href === "/" ? activeSection === "home" : false;
               return (
                 <li key={link.label}>
-                  <a href={link.href} onClick={() => setOpen(false)} className={`flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black ${isActive ? "bg-white/10 text-white" : "bg-transparent text-white/70 hover:bg-white/10 hover:text-white"}`}>
+                  <Link href={link.href} onClick={() => setOpen(false)} className={`flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black ${isActive ? "bg-white/10 text-white" : "bg-transparent text-white/70 hover:bg-white/10 hover:text-white"}`}>
                     <span>{link.label}</span>
                     <HiArrowRight className="text-base" />
-                  </a>
+                  </Link>
                 </li>
               );
             })}
@@ -151,8 +146,8 @@ export default function Navbar() {
         </nav>
 
         <div className="mt-auto space-y-4">
-          <Link href="/book-call" onClick={() => setOpen(false)} className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black">
-            Book a Free Website Consultation
+          <Link href="/contact" onClick={() => setOpen(false)} className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black">
+            Discuss Your Project
           </Link>
         </div>
       </aside>

@@ -56,11 +56,11 @@ export default function ContactSection() {
               </p>
 
               <h2 className="mt-5 max-w-full text-[clamp(2rem,7vw,4.5rem)] leading-[0.95] tracking-[-0.03em] text-white">
-                Ready to Build a Website That Helps Your Business Grow?
+                Have a Website Problem You Want to Solve?
               </h2>
 
               <p className="mt-5 max-w-full text-[clamp(0.95rem,1.5vw,1.08rem)] leading-7 text-white/65 sm:leading-8">
-                Whether you need a custom WordPress website, Shopify store, redesign, SEO improvements, or a fully custom web application, let&apos;s discuss your project and find the best solution.
+                Whether you&apos;re planning something new or trying to improve an existing website, tell me what isn&apos;t working and what you want the website to achieve.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap">

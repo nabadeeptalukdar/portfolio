@@ -1,17 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import GlassCard from "@/components/ui/GlassCard";
-
-const highlights = [
-  "WordPress Development",
-  "Business Website Development",
-  "Custom Website Development",
-  "Technical SEO",
-  "Website Maintenance",
-  "Website Redesign",
-];
 
 export default function AboutSection() {
   return (
@@ -27,17 +19,19 @@ export default function AboutSection() {
           <GlassCard className="min-h-full">
             <SectionHeading
               eyebrow="About"
-              title="I build professional websites that help businesses look stronger and perform better."
-              description="I work with business owners, founders, and growing brands who need a website that is clear, trustworthy, and built to support enquiries and sales. From WordPress development and custom website development to business websites, ecommerce websites, full stack web solutions, and technical SEO, I focus on building digital experiences that solve real business problems."
+              title="A Developer Who Looks Beyond the Build."
+              description="I’m Nabadeep Talukdar, a web developer based in India. I work with businesses that need more than a website that simply looks good."
             />
 
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {highlights.map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-full border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/70">
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/70" />
-                  {item}
-                </div>
-              ))}
+            <div className="mt-8 flex flex-wrap gap-3 text-sm text-white/70">
+              <span className="rounded-full border border-white/10 bg-black/20 px-4 py-3">Based in India • Working with businesses worldwide</span>
+            </div>
+
+            <div className="mt-8">
+              <Link href="/about" className="inline-flex items-center gap-2 text-sm font-medium text-white/80 transition hover:text-white">
+                More About Me
+                <span aria-hidden="true">→</span>
+              </Link>
             </div>
           </GlassCard>
 
@@ -47,18 +41,18 @@ export default function AboutSection() {
                 What I Deliver
               </p>
               <p className="mt-4 text-2xl font-semibold text-white sm:text-3xl">
-                Thoughtful design, dependable development, and a website that supports your business in the long term.
+                Clean execution, reliable communication and websites that stay useful long after launch.
               </p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-white/10 bg-black/20 p-5">
-                <p className="text-4xl font-semibold text-white">Global</p>
-                <p className="mt-2 text-sm text-white/60">Working with clients worldwide who need dependable development and clear communication.</p>
+                <p className="text-4xl font-semibold text-white">Strategy</p>
+                <p className="mt-2 text-sm text-white/60">Understanding the business goal before choosing the right solution.</p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-black/20 p-5">
-                <p className="text-4xl font-semibold text-white">Support</p>
-                <p className="mt-2 text-sm text-white/60">Ongoing website maintenance, updates, and performance support after launch.</p>
+                <p className="text-4xl font-semibold text-white">Execution</p>
+                <p className="mt-2 text-sm text-white/60">Building websites that balance usability, performance and maintainability.</p>
               </div>
             </div>
           </GlassCard>

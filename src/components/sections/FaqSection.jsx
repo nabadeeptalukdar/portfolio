@@ -3,34 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiChevronDown } from "react-icons/hi2";
-
-const faqs = [
-  {
-    question: "How long does a project take?",
-    answer:
-      "Most projects begin with a clear timeline after the discovery call. Simple builds can move quickly, while more custom work may take several weeks depending on complexity and content readiness.",
-  },
-  {
-    question: "Can you redesign my existing website?",
-    answer:
-      "Yes. I can improve an existing site with stronger messaging, better structure, faster performance, and a more premium experience that supports your business goals.",
-  },
-  {
-    question: "Do you work with international clients?",
-    answer:
-      "Yes. I work with clients worldwide and maintain clear communication throughout the process so projects stay aligned and on track.",
-  },
-  {
-    question: "Do you provide ongoing maintenance?",
-    answer:
-      "Yes. I can support your site after launch with updates, performance improvements, content changes, and long-term reliability.",
-  },
-  {
-    question: "Can you build a WordPress or Shopify website for my company?",
-    answer:
-      "Yes. I build polished WordPress websites, Shopify stores, and custom web experiences that are practical, modern, and focused on measurable results.",
-  },
-];
+import { faqItems } from "@/data/siteData";
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -51,13 +24,10 @@ export default function FaqSection() {
           <h2 className="mx-auto mt-5 max-w-3xl text-3xl font-semibold tracking-[-0.02em] text-white sm:text-4xl lg:text-[2.6rem]">
             Answers to common questions before starting a project.
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
-            A clear and straightforward process helps you understand what to expect, how we work together, and what kind of result you can expect.
-          </p>
         </motion.div>
 
         <div className="mt-12 space-y-4">
-          {faqs.map((faq, index) => {
+          {faqItems.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (
@@ -73,6 +43,7 @@ export default function FaqSection() {
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
                   className="flex w-full items-center justify-between gap-4 text-left"
+                  aria-expanded={isOpen}
                 >
                   <span className="text-lg font-medium text-white">{faq.question}</span>
                   <span className={`rounded-full border border-white/10 bg-black/20 p-2 text-white/70 transition ${isOpen ? "rotate-180" : "rotate-0"}`}>

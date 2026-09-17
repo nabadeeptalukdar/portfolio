@@ -6,34 +6,24 @@ import GlassCard from "@/components/ui/GlassCard";
 
 const experiences = [
   {
-    role: "Discovery Call",
+    role: "Understand",
     period: "01",
-    summary: "We begin with a conversation about your goals, audience, and the outcomes you need from your website, whether that means a new website, a redesign, better conversion, or stronger online visibility.",
+    summary: "First understand the business, audience, current problems and what the website actually needs to achieve.",
   },
   {
-    role: "Planning",
+    role: "Plan",
     period: "02",
-    summary: "We define the structure, messaging, and priorities so the website is aligned with your business objectives and built for the right audience.",
+    summary: "Define the structure, user journey, content direction and right technical approach for the project.",
   },
   {
-    role: "Design & Strategy",
+    role: "Build",
     period: "03",
-    summary: "We shape the visual direction and user experience to ensure the site feels polished, premium, and built to convert.",
+    summary: "Design and develop the experience with responsiveness, performance and maintainability in mind.",
   },
   {
-    role: "Development",
+    role: "Launch & Improve",
     period: "04",
-    summary: "The website is built with attention to speed, reliability, scalability, and long-term maintainability.",
-  },
-  {
-    role: "Testing & Launch",
-    period: "05",
-    summary: "We review performance, functionality, content, and technical SEO before releasing the site with confidence.",
-  },
-  {
-    role: "Ongoing Support",
-    period: "06",
-    summary: "We remain available for updates, maintenance, performance improvements, and continued support as your business evolves.",
+    summary: "Test, launch and continue improving the website where ongoing support is required.",
   },
 ];
 
@@ -43,8 +33,8 @@ export default function ExperienceSection() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Process"
-          title="A clear process for building websites that work."
-          description="Each engagement is designed to keep the project focused, transparent, and aligned with the outcome your business needs, whether that’s better enquiries, stronger credibility, or a more effective online presence."
+          title="A clear process built around the problem you need to solve."
+          description="Each project is structured to keep the work focused on what the website actually needs to achieve, from clearer user journeys to stronger usability and better business outcomes."
         />
 
         <div className="mt-12 space-y-5">

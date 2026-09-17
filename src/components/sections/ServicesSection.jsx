@@ -1,63 +1,26 @@
 "use client";
 
-import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
-import GlassCard from "@/components/ui/GlassCard";
-
-const services = [
-  {
-    title: "Business Website Development",
-    description: "Professional websites built to establish trust, generate enquiries, and represent your business online with clarity and confidence.",
-  },
-  {
-    title: "WordPress Development",
-    description: "WordPress websites designed for business growth, easier content updates, and a strong online presence that is simple to manage.",
-  },
-  {
-    title: "Custom Website Development",
-    description: "Tailored web solutions built around your business goals, workflows, and the experience you want customers to have.",
-  },
-  {
-    title: "Website Performance & Technical SEO",
-    description: "Improve website speed, Core Web Vitals, technical SEO, and search visibility without sacrificing premium design or user experience.",
-  },
-];
+import ServiceCard from "@/components/ui/ServiceCard";
+import { services } from "@/data/siteData";
 
 export default function ServicesSection() {
   return (
     <section id="services" className="scroll-mt-24 px-5 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-28 xl:py-32">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Services"
-          title="Premium web solutions for businesses that need clarity, performance, and growth."
-          description="From WordPress development and custom website development to business websites, ecommerce solutions, full stack web development, and technical SEO, each engagement is shaped around the needs of your customers and the growth of your business."
+          eyebrow="HOW I CAN HELP"
+          title="Whatever Is Holding Your Website Back, Let’s Fix It."
+          description="Whether you're starting from scratch or improving an existing website, I can help with the strategy, design, development and technical work needed to turn it into a stronger business asset."
         />
 
         <div className="mt-12 grid gap-5 md:grid-cols-2">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ delay: index * 0.06, duration: 0.35 }}
-            >
-              <GlassCard className="group h-full">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="space-y-3">
-                    <div className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sm font-medium text-white/80">
-                      0{index + 1}
-                    </div>
-                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                  </div>
-                  <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.25em] text-white/40">
-                    Service
-                  </span>
-                </div>
-                <p className="mt-6 text-sm leading-7 text-white/60">{service.description}</p>
-              </GlassCard>
-            </motion.div>
-          ))}
+          <ServiceCard service={{ title: "Build a New Website", description: "Need a professional website from the ground up? I can take it from structure and user experience through development, launch and optimization.", href: "/services/wordpress-development" }} index={0} />
+          <ServiceCard service={{ title: "Redesign an Outdated Website", description: "If your current website feels dated, confusing or no longer represents your business, I can rebuild the experience around clearer structure, better usability and stronger presentation.", href: "/services/website-redesign" }} index={1} />
+          <ServiceCard service={{ title: "Improve Speed & Performance", description: "Slow load times, poor Core Web Vitals or heavy pages? I can identify the bottlenecks and improve the experience across devices.", href: "/services/website-performance" }} index={2} />
+          <ServiceCard service={{ title: "Build an Ecommerce Experience", description: "Create a smoother path from product discovery to purchase with an ecommerce experience built around usability, performance and conversion.", href: "/services/shopify-development" }} index={3} />
+          <ServiceCard service={{ title: "Build Something Custom", description: "When templates, plugins or standard platforms aren't enough, I can build custom-coded interfaces, interactions and web functionality around your requirements.", href: "/services/custom-web-development" }} index={4} />
+          <ServiceCard service={{ title: "Fix Technical SEO Issues", description: "Resolve crawlability, indexing, metadata, site structure, redirects and other technical problems that can hold back search visibility.", href: "/services/technical-seo" }} index={5} />
         </div>
       </div>
     </section>
